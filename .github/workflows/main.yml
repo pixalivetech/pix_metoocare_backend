@@ -33,7 +33,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: pix_metoocare_backend       # ✅ Your Beanstalk app name
-          environment_name: pix_metoocare_backend-env   # ✅ Your environment name
+          environment_name: pix-metoocare-backend-env   # ✅ Your environment name
           region: ${{ secrets.AWS_REGION }}
           version_label: "v-${{ github.run_number }}"
           deployment_package: app.zip
