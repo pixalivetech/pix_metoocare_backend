@@ -29,6 +29,14 @@ switch (ENVIRONMENT) {
         }
         break;
     }
+     case 'local': {
+        if (fs.existsSync(path.join(process.cwd(), '/.env'))) {
+            dotenv.config({ path: ".env" });
+        } else {
+            process.exit(1);
+        }
+        break;
+    }
     default: {
         if (fs.existsSync(path.join(process.cwd(), '/.env.development'))) {
             dotenv.config({ path: ".env.development" });
