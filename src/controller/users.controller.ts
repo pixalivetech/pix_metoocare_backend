@@ -44,7 +44,7 @@ export let saveUsers = async (req, res, next) => {
                 finalResult["usersDetails"] = result;
                 finalResult["token"] = token;
                 sendEmailOtp(insertData.email,insertData.otp)
-                sendEmail(insertData.email,insertData.otp)
+                //sendEmail(insertData.email,insertData.otp)
                 response(req, res, activity, 'Level-2', 'Save-Users', true, 200, result, clientError.otp.otpSent);
             }
             else {

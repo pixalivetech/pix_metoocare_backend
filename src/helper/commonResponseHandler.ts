@@ -112,14 +112,14 @@ export function generate(length) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'pixaliveadearns@gmail.com',
-          pass: 'tcqkdycouumvjrac',
+          user: 'kaaviyan98@gmail.com',
+          pass: 'owxfvclfwqwdlhpf',
         },
       });
   export let  sendEmailOtp=async(email,otp)=>{
             if(!email){throw new Error("email is not register")}
                       const mailOptions = {
-                      from: 'pixaliveadearns@gmail.com',
+                      from: 'pixalivetech@gmail.com',
                       to: email,
                       subject: 'Email Verification OTP',
                       text: `Your verification OTP: ${otp}`,

@@ -44,7 +44,7 @@ export let login = async (req, res, next) => {
                     }
                 })
                 sendEmailOtp(insertData?.email,otp);
-                sendEmail(userDetails.email,otp);
+               // sendEmail(userDetails.email,otp);
                 response(req, res, activity, 'Level-2', 'Login-User', true, 200, otp, clientError.otp.otpSent);
                 } 
         }
