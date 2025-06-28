@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Create deployment package
-        run: zip -r app.zip . -x "*.git*" "node_modules/*" ".github/*"
+        run: zip -r server.zip . -x "*.git*" "node_modules/*" ".github/*"
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
@@ -35,5 +35,5 @@ jobs:
           environment_name: Demo-env
           region: ${{ secrets.AWS_REGION }}
           version_label: "v-${{ github.sha }}"
-          deployment_package: app.zip
-          use_existing_version_if_available: true
+          deployment_package: server.zip
+          
