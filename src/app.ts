@@ -9,13 +9,10 @@ import { Server, Socket } from 'socket.io';
 import * as http from 'http';
 
 
-// const ap = express();
-// const server = http.createServer(ap);
-// const io = new Server(server);
-
 export const app: any = {
 	instance: express(),
 	async init() {
+
 		this.initConfig();
 		await this.initDatabase();
 		this.initRoutes();
@@ -61,24 +58,3 @@ export const app: any = {
 	},
 };
 
-// const ap = express();
-// const server = http.createServer(ap);
-// const io = new Server(server, {
-//   cors: {
-//     origin: "http://localhost:3000",
-//     methods: ["GET", "POST"],
-//   },
-// });
-
-
-// io.on("connection", (socket: Socket) => {
-//   console.log(`User Connected: ${socket.id}`);
-
-//   socket.on("join_room", (data: { room: string }) => {
-//     socket.join(data.room);
-//   });
-
-//   socket.on("send_message", (data: { room: string; message: string }) => {
-//     socket.to(data.room).emit("receive_message", data);
-//   });
-// });
