@@ -36,3 +36,4 @@ jobs:
           region: ${{ secrets.AWS_REGION }}
           version_label: "v-${{ github.run_number }}"
           deployment_package: app.zip
+          existing_bucket_name: pix-tech
