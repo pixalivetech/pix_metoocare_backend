@@ -1,6 +1,6 @@
 name: Deploy to AWS Elastic Beanstalk
 
-on: 
+on:
   push:
     branches: [main]
 
@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: pix_metoocare_backend       # ✅ Your Beanstalk app name
-          environment_name: pix-metoocare-backend-env   # ✅ Your environment name
+          application_name: pix_metoocare_backend
+          environment_name: pix-metoocare-backend-env
           region: ${{ secrets.AWS_REGION }}
-          version_label: 12345
+          version_label: "v-${{ github.run_number }}"
           deployment_package: server.zip
