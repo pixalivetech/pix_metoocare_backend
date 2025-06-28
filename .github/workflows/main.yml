@@ -36,4 +36,5 @@ jobs:
           region: ${{ secrets.AWS_REGION }}
           version_label: "v-${{ github.sha }}"
           deployment_package: server.zip
+          existing_bucket_name: pix-tech
           use_existing_version_if_available: true
