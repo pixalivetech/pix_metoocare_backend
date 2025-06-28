@@ -2,10 +2,10 @@
   "name": "pixaliveworks",
   "version": "1.0.0",
   "description": " ",
-  "main": "dist/src/bin/server.js",
+  "main": "dist/bin/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "export NODE_ENV=production&& ts-node-prod --max-old-space-size=2048 ./src/bin/server.ts --fast",
+    "start": "node dist/bin/server.js",
     "dev": "export NODE_ENV=development&& ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "local": "cross-env NODE_ENV=development  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "testing": "export NODE_ENV=testing&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
