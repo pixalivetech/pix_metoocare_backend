@@ -34,5 +34,5 @@ jobs:
           application_name: pix_metoocare_backend
           environment_name: pix-metoocare-backend-env
           region: ${{ secrets.AWS_REGION }}
-          version_label: "v-${{ github.run_number }}"
+          version_label: "v-${{ github.sha }}"
           deployment_package: server.zip
