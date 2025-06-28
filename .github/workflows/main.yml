@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -17,14 +17,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build TypeScript (non-blocking)
-        run: npm run build || echo "Build completed with warnings"
+      - name: Compile TypeScript
+        run: npm run build
 
-      - name: Create Deployment Package
-        run: zip -r server.zip . -x "*.git*" "node_modules/*" ".github/*"
+      - name: Create deployment package
+        run: zip -r app.zip . -x "*.git*" "node_modules/*" ".github/*"
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
@@ -35,5 +35,5 @@ jobs:
           environment_name: pix-metoocare-backend-env
           region: ${{ secrets.AWS_REGION }}
           version_label: "v-${{ github.sha }}"
-          deployment_package: server.zip
+          deployment_package: app.zip
           use_existing_version_if_available: true
