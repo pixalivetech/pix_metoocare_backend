@@ -13,7 +13,7 @@ switch (ENVIRONMENT) {
         }
         break;
     }
-    case 'development': {
+    case 'development':  {
         if (fs.existsSync(path.join(process.cwd(), '/.env.development'))) {
             dotenv.config({ path: ".env.development" });  
         } else {

@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "export NODE_ENV=production&& ts-node-prod --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "dev": "export NODE_ENV=development&& ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
-    "local": "set NODE_ENV=local&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
+    "local": "cross-env NODE_ENV=development  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "testing": "export NODE_ENV=testing&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "prod": "export NODE_ENV=production&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
-     "build": "tsc"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -41,12 +41,13 @@
     "nodemailer": "^6.9.5",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
-    "socket.io": "^4.7.2",
-    "ts": "^0.2.2",
+    "socket.io": "^4.8.1",
     "typescript": "^5.3.2",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
+    "@types/socket.io": "^3.0.2",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "ts-node-dev": "^2.0.0"
   },
