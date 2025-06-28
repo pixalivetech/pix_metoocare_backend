@@ -9,7 +9,8 @@
     "dev": "export NODE_ENV=development&& ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "local": "set NODE_ENV=local&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "testing": "export NODE_ENV=testing&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
-    "prod": "export NODE_ENV=production&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast"
+    "prod": "export NODE_ENV=production&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
+     "build": "tsc"
   },
   "author": "",
   "license": "ISC",
