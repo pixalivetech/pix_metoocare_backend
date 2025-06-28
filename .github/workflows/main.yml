@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Create Deployment Package
-        run: zip -r app.zip . -x "*.git*" "node_modules/*" ".github/*"
+        run: zip -r server.zip . -x "*.git*" "node_modules/*" ".github/*"
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
@@ -35,4 +35,4 @@ jobs:
           environment_name: pix-metoocare-backend-env   # ✅ Your environment name
           region: ${{ secrets.AWS_REGION }}
           version_label: 12345
-          deployment_package: app.zip
+          deployment_package: server.zip
