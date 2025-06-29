@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: pix_metoocare_backend                      # Change if your app is not "demo"
-          environment_name: pix-metoocare-backend-env                  # Change if your env is not "Demo-env"
+          application_name: demo                      # Change if your app is not "demo"
+          environment_name: Demo-env                 # Change if your env is not "Demo-env"
           region: ${{ secrets.AWS_REGION }}
           version_label: "v-${{ github.sha }}"
           deployment_package: server.zip
