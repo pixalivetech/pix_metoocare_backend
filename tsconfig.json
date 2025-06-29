@@ -16,7 +16,7 @@
     "suppressImplicitAnyIndexErrors": false,
     "target": "es2020",
     "strict": false,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": [
