@@ -1,6 +1,6 @@
-import * as crypto from "crypto";
-import * as Config from "../config/Enviornment";
-import * as CryptoJS from "crypto-js";
+import  crypto from "crypto";
+import  Config from "../config/Enviornment";
+import  CryptoJS from "crypto-js";
 
 
 

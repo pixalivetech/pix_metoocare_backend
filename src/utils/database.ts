@@ -1,6 +1,6 @@
 "use strict";
-import * as mongoose from 'mongoose';
-import * as config from '../config';
+import  mongoose from 'mongoose';
+import  config from '../config';
 import { Admin } from '../model/admin.model';
 
 export class mongoconnect {

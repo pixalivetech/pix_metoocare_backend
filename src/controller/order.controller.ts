@@ -8,7 +8,7 @@
   import {DateTime} from 'luxon'
   import { saveNotification } from "../controller/notification.controller";
   import { Cashfree } from "cashfree-pg"; 
-  import * as dotenv from 'dotenv';
+  import  dotenv from 'dotenv';
   // Configure Cashfree credentials
   Cashfree.XClientId = process.env.ClientId;
   Cashfree.XClientSecret = process.env.ClientSecret;

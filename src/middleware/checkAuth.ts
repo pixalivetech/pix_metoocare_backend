@@ -5,7 +5,7 @@
  */
 
 
-import * as auth from 'basic-auth';
+import  auth from 'basic-auth';
 import { clientError } from '../helper/ErrorMessage';
 
 export let basicAuthUser = function (req, res, next) {

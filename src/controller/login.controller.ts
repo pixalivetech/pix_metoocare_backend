@@ -5,7 +5,7 @@ import { Users,UsersDocument} from "../model/users.model";
 import { Panel,PanelDocument } from "../model/panel.model"; 
 import { Company,CompanyDocument } from "../model/company.model";
 import { Doctor,DoctorDocument } from "../model/doctor.model";
-import * as TokenManager from "../utils/tokenManager";
+import  TokenManager from "../utils/tokenManager";
 
 
 var activity = "Login"

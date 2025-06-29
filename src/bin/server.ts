@@ -1,6 +1,6 @@
 import { app } from '../app';
 import { Server, Socket } from 'socket.io';
-import * as http from 'http';
+import  http from 'http';
 
 /**
  * Get port from environment and store in Express.

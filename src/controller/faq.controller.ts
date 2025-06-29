@@ -6,7 +6,7 @@ import { Users , UsersDocument} from '../model/users.model';
 import { response,notifyDoctor } from '../helper/commonResponseHandler';
 import { clientError, errorMessage } from '../helper/ErrorMessage';
 import { notifyUser } from '../utils/notification';
-import * as mongoose from 'mongoose';
+import  mongoose from 'mongoose';
 
 var activity = 'Faq';
 

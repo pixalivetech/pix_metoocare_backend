@@ -1,4 +1,4 @@
-import * as jwt from  'jsonwebtoken';
+import  jwt from  'jsonwebtoken';
 import { response } from '../helper/commonResponseHandler';
 import { clientError, errorMessage } from '../helper/ErrorMessage';
 

@@ -1,12 +1,12 @@
-import * as bodyParser from 'body-parser';
+import  bodyParser from 'body-parser';
 import express from 'express';
-import * as path from 'path';
+import  path from 'path';
 import cors from 'cors';
 import { Request, Response, NextFunction } from 'express';
 import { mongoconnect } from './utils/database';
 import routes from './router'
 import { Server, Socket } from 'socket.io';
-import * as http from 'http';
+import  http from 'http';
 
 
 export const app: any = {

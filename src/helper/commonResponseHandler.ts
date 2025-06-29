@@ -6,7 +6,7 @@ import axios from 'axios';
 import { OrderDocument } from "src/model/order.model";
 import {Doctor} from "../model/doctor.model";
 import {Users} from "../model/users.model";
-import * as crypto from 'crypto'; // Use * as to import the entire crypto module
+import  crypto from 'crypto'; // Use  to import the entire crypto module
 
 /**
  * @param res {Function} Response 

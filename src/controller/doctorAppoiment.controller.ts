@@ -3,7 +3,7 @@ import { clientError, errorMessage } from "../helper/ErrorMessage";
 import { response ,generateTicketNumber,sentEmail,getDoctorEmailAddress,getUserEmailAddress} from "../helper/commonResponseHandler";
 import { DoctorAppointment,DoctorAppointmentDocument } from "../model/doctorAppoiment.model";
 import { saveNotification } from "../controller/notification.controller";
-import * as moment from 'moment';
+import  moment from 'moment';
 
 var activity = "DoctorAppoiment";
 
