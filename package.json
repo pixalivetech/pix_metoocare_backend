@@ -5,7 +5,7 @@
   "main": "dist/bin/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node dist/bin/server.js",
+    "start": "node dist/bin/server.js",
     "dev": "export NODE_ENV=development&& ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "local": "cross-env NODE_ENV=development  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
     "testing": "export NODE_ENV=testing&&  ts-node-dev --max-old-space-size=2048 ./src/bin/server.ts --fast",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@types/socket.io": "^3.0.2",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.6.1",
     "ts-node-dev": "^2.0.0"
   },
   "keywords": []
