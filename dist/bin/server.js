@@ -6,7 +6,7 @@ const http = require("http");
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(app_1.app.instance.get('port') || '5000');
+const port = normalizePort(app_1.app.instance.get('port') || '5005');
 app_1.app.instance.set('port', port);
 /**
  * Create HTTP server.
