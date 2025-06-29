@@ -46,6 +46,9 @@ export const app: any = {
 		this.instance.get('/', (req, res) => {
 			res.sendFile(path.join(__dirname, 'dist/index.html'));
 		});
+		this.instance.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 		this.instance.use((req: Request, res: Response, next: NextFunction) => {
 			const err = new Error('Not Found');
 			err['status'] = 404;
