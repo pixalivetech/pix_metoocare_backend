@@ -5,7 +5,7 @@ on:
     branches: [main] 
   
 jobs:  
-  deploy: 
+  deploy:  
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
           node-version: 20
  
       - name: Install dependencies
-        run: npm install
+        run: npm install --production
 
       - name: Build TypeScript
         run: npm run build
