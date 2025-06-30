@@ -33,7 +33,7 @@ switch (ENVIRONMENT) {
         if (fs.existsSync(path.join(process.cwd(), '/.env.development'))) {
             dotenv.config({ path: ".env.development" });
         } else {
-            process.exit(1);
+          dotenv.config({ path: ".env" });
         }
 
     }
