@@ -47,7 +47,7 @@ export const app: any = {
 			res.sendFile(path.join(__dirname, 'dist/index.html'));
 		});
 		this.instance.get('/health', (req, res) => {
-  res.status(200).send('OK');
+  res.status(200).send('Welcome to PTS');
 });
 		this.instance.use((req: Request, res: Response, next: NextFunction) => {
 			const err = new Error('Not Found');
