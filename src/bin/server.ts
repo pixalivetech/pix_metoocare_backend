@@ -5,7 +5,8 @@ import * as http from 'http';
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(app.instance.get('port') || '5005');
+const port = normalizePort(process.env.PORT );
+
 app.instance.set('port', port);
  
 /**

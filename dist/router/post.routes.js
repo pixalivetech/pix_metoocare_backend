@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const Validators_1 = require("../middleware/Validators");
+const checkAuth_1 = require("../middleware/checkAuth");
+const tokenManager_1 = require("../utils/tokenManager");
+const post_controller_1 = require("../controller/post.controller");
+const router = (0, express_1.Router)();
+router.get('/', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.getAllPost);
+router.post('/', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.savePost);
+router.put('/', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, (0, Validators_1.checkRequestBodyParams)('_id'), post_controller_1.updatePost);
+router.delete('/', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, (0, Validators_1.checkQuery)('_id'), post_controller_1.deletePost);
+router.get('/getSinglePost', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, (0, Validators_1.checkQuery)('_id'), post_controller_1.getSinglePost);
+router.put('/getFilterPost', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.getFilterPost);
+router.post('/savePostLikes', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.savePostLikes);
+router.post('/createPostComments', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.createPostComments);
+router.put('/updatePostBlockUsers', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.updatePostBlockUsers);
+router.put('/updatePostReport', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.updatePostReport);
+router.put('/getFilterPostByUser', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.getFilterPostByUser);
+router.post('/sharePost', checkAuth_1.basicAuthUser, tokenManager_1.checkSession, post_controller_1.sharePost);
+exports.default = router;
+//# sourceMappingURL=post.routes.js.map
