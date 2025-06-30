@@ -29,6 +29,8 @@ jobs:
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
         with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: demo                      # Change if your app is not "demo"
           environment_name: Demo-env                 # Change if your env is not "Demo-env"
           region: ${{ secrets.AWS_REGION }}
